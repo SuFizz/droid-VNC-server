@@ -72,8 +72,9 @@ LOCAL_C_INCLUDES += \
 										$(LOCAL_PATH)/$(LIBVNCSERVER_ROOT)/ \
 										$(LOCAL_PATH)/../../nativeMethods/
 
-LOCAL_STATIC_LIBRARIES := libjpeg libpng libssl_static libcrypto_static
-
+#LOCAL_STATIC_LIBRARIES := libjpeg libpng libssl_static libcrypto_static
+LOCAL_SHARED_LIBRARIES := libjpeg libssl libcrypto libcutils libdl libz
+LOCAL_STATIC_LIBRARIES := libpng
 LOCAL_MODULE := androidvncserver
 
 include $(BUILD_EXECUTABLE)
