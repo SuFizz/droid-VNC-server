@@ -77,5 +77,5 @@ LOCAL_SHARED_LIBRARIES := libjpeg libssl libcrypto libcutils libdl libz
 LOCAL_STATIC_LIBRARIES := libpng
 LOCAL_MODULE := androidvncserver
 
-#include $(BUILD_EXECUTABLE)
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_EXECUTABLE)
+#include $(BUILD_SHARED_LIBRARY)
