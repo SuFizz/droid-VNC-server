@@ -50,13 +50,13 @@ extern "C" screenFormat getscreenformat_flinger()
     format.height       = screenshotClient->getHeight();
     format.size         = pf.bitsPerPixel*format.width*format.height/CHAR_BIT;
     format.redShift     = pf.l_red;
-    format.redMax       = pf.h_blue;
+    format.redMax       = pf.h_red - pf.l_red;
     format.greenShift   = pf.l_green;
-    format.greenMax     = pf.h_green-pf.h_blue;
+    format.greenMax     = pf.h_green - pf.l_green;
     format.blueShift    = pf.l_blue;
-    format.blueMax      = pf.h_red-pf.h_green;
+    format.blueMax      = pf.h_blue - pf.l_blue;
     format.alphaShift   = pf.l_alpha;
-    format.alphaMax     = pf.h_alpha-pf.h_red;
+    format.alphaMax     = pf.h_alpha-pf.l_alpha;
 
     return format;
 }
