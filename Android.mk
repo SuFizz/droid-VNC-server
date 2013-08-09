@@ -24,7 +24,7 @@ LOCAL_SDK_VERSION := current
 
 LOCAL_PACKAGE_NAME := AndroidVNC
 LOCAL_CERTIFICATE := shared
-
+LOCAL_JNI_SHARED_LIBRARIES := libdvnc_flinger_sdk17 libandroidvncserver
 include $(BUILD_PACKAGE)
 
 #include $(call all-makefiles-under,$(LOCAL_PATH))
